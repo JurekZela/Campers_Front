@@ -9,7 +9,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding: 30px;
-  background: linear-gradient(to right, rgb(161, 255, 206), rgb(250, 255, 209));
 
   
     display: flex;
