@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyled = createGlobalStyle`
 body {
   margin: 0;
+    padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -11,6 +12,7 @@ body {
     display: flex;
     justify-content: center;
     height: 100vh;
+    background-color: #FFFFFF;
 }
 
 code {
