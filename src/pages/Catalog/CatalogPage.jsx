@@ -1,9 +1,9 @@
-import Trucks from "../../components/Trucks/Trucks.jsx";
+import Truck from "../../components/Truck/Truck.jsx";
 
 export default function CatalogPage () {
   return(
     <div>
-      <Trucks />
+      <Truck />
     </div>
   )
 }

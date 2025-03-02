@@ -4,17 +4,25 @@ import { fetchTrucks } from './operations.js';
 const fulfilledTrucks = (state, action) => {
   // state.isLoggedIn = true;
   // state.isRefreshing = false;
-  // state.user = action.payload.user;
-  console.log(action);
-  console.log(state);
+  state.items = action.payload.items;
+  console.log(action.payload.items);
+};
+
+const fetchTrucksRejected = (state, action) => {
+  // state.isLoading = false;
+  state.error = action.payload;
 }
 
 const trucksSlice = createSlice({
-  name: "trucks",
-  initialState: {},
+  name: "truck",
+  initialState: {
+    items: [],
+    error: null,
+  },
   extraReducers: builder => {
     builder
       .addCase(fetchTrucks.fulfilled, fulfilledTrucks)
+      .addCase(fetchTrucks.rejected, fetchTrucksRejected)
   }
 });
 

@@ -1,6 +1,6 @@
 import TruckList from '../TruckList/TruckList.jsx';
 
-export default function Trucks() {
+export default function Truck() {
   return (
     <TruckList />
   )
