@@ -13,7 +13,7 @@ export const Container = styled.div`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url("../../../public/images/background.svg");
+    background-image: url("../../../images/background.svg");
 `;
 
 export const HomeTitle = styled.h1`

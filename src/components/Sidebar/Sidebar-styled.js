@@ -1,4 +1,4 @@
-import { styled, css } from 'styled-components';
+import { styled } from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const Block = styled.div`
@@ -16,36 +16,24 @@ export const HeaderMenu = styled.div`
     margin: 0 auto;
 `;
 
-// margin-right: 17px;
-// list-style: none;
-// text-decoration: none;
-// color: #101828;
-//
-// & {
-//   color: #D84343;
-// }
-
 export const HeaderHome = styled(NavLink)`
-      ${(props) => {
-          console.log(props);
-    switch(props.children === 'Home') {
-      case 'active':
-        return css`
-            color: #D84343;
-        `;
-      
-    default: return css`
     margin-right: 17px;
     list-style: none;
     text-decoration: none;
-    color: #101828
-    `;
+    color: #101828;
+
+    &.active {
+        color: #D84343;
     }
-      }}`;
+`;
 
 export const HeaderCatalog = styled(NavLink)`
     margin-left: 17px;
     list-style: none;
     text-decoration: none;
     color: #101828;
+
+    &.active {
+        color: #D84343;
+    }
 `;
