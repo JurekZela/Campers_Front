@@ -1,6 +1,15 @@
 import { useSelector } from 'react-redux';
 import { selectTruck } from '../../redux/catalog/TruckInfo/selectors.js';
-import { TruckContainer, TruckImg, Description, TruckCard,ListCardInfo } from './Truck-styled.js';
+import {
+  TruckContainer,
+  TruckImg,
+  Description,
+  TruckCard,
+  ListCardInfo,
+  TruckName,
+  TruckPrice,
+  ShowMore,
+} from './Truck-styled.js';
 
 export default function Truck() {
   const selectTrucks = useSelector(selectTruck);
@@ -11,12 +20,12 @@ export default function Truck() {
         <TruckCard key={list.id}>
           <TruckImg src={list.gallery[0].thumb} alt={list.name} />
           <ListCardInfo>
-            <p>{list.name}</p>
-            <p>{list.price}</p>
+            <TruckName>{list.name}</TruckName>
+            <TruckPrice>€{list.price}</TruckPrice>
             <p>{`${list.rating}(${list.reviews.length} Reviews)`}</p>
             <p>{list.location}</p>
             <Description>{list.description}</Description>
-            <button>Show More</button>
+            <ShowMore>Show More</ShowMore>
           </ListCardInfo>
         </TruckCard>
       ))}

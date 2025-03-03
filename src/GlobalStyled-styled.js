@@ -28,6 +28,7 @@ h5,
 h6,
 p {
   margin: 0;
+    font-family: Inter;
 }
 ul,
 ol {

@@ -2,14 +2,14 @@ import { styled } from 'styled-components';
 
 export const TruckContainer = styled.ul`
     display: block;
-    margin-left: auto;
+    margin: 48px 0 0 auto;
     width: 888px;
     height: 368px;
 `;
 
 export const TruckCard = styled.li`
     display: flex;
-    margin: 0 0 32px 32px;
+    margin: 0 0 32px 0;
     padding: 23px 24px 23px 23px;
     border: 1px solid #DADDE1;
     border-radius: 20px;
@@ -17,6 +17,20 @@ export const TruckCard = styled.li`
     &:last-child {
         margin-bottom: 0;
     }
+`;
+
+export const TruckName = styled.h2`
+    color: #101828;
+    font-weight: 600;
+    font-size: 24px;
+    
+`;
+
+export const TruckPrice = styled.p`
+    color: #101828;
+    font-weight: 600;
+    font-size: 24px;
+    
 `;
 
 export const TruckImg = styled.img`
@@ -31,9 +45,23 @@ margin-left: 12px;
 `;
 
 export const Description = styled.p`
-
     color: #475467;
     font-weight: 400;
     font-size: 16px;
+`;
+
+export const ShowMore = styled.button`
+    width: 166px;
+    height: 56px;
+    color: #FFFFFF;
+    background-color: #E44848;
+    font-weight: 500;
+    font-size: 16px;
     font-family: Inter;
+    border-radius: 200px;
+    border: none;
+    
+    &:hover {
+        background-color: #D84343;
+    }
 `;
