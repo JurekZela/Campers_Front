@@ -1,20 +1,19 @@
 import { styled } from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
-export const SidebarContainer = styled.div`
+export const SidebarContainer = styled.header`
     display: flex;
     align-items: center;
     background-color: #F7F7F7;
-    height: 72px;
-    width: 100vh;
-    min-width: 1550px;
+    min-width: 1440px;
     border: 1px solid #F2F4F7;
     padding-left: 64px;
 `;
 
-export const HeaderMenu = styled.div`
-    display: block;
+export const HeaderMenu = styled.nav`
+    display: flex;
     margin: 0 auto;
+    padding: 30px 0 30px 0;
 `;
 
 export const HeaderHome = styled(NavLink)`

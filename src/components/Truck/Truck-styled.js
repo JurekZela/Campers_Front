@@ -19,6 +19,11 @@ export const TruckCard = styled.li`
     }
 `;
 
+export const InfoPriNam = styled.div`
+    display: flex;
+    justify-content: space-between;
+`;
+
 export const TruckName = styled.h2`
     color: #101828;
     font-weight: 600;
@@ -35,7 +40,6 @@ export const TruckPrice = styled.p`
 
 export const TruckImg = styled.img`
     width: 292px;
-    height: 320px;
     margin-right: 12px;
     border-radius: 10px;
 `;
@@ -50,14 +54,37 @@ export const Description = styled.p`
     font-size: 16px;
 `;
 
+export const InfoLocMap = styled.div`
+display: flex;
+    margin: 20px 0 36px 12px;
+`;
+
+export const Rating = styled.p`
+    display: flex;
+    gap: 6px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #101828;
+`;
+
+export const Location = styled.p`
+    display: flex;
+    gap: 6px;
+`;
+
 export const ShowMore = styled.button`
-    width: 166px;
-    height: 56px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+    min-width: 166px;
+    padding: 22px 41px 22px 41px;
     color: #FFFFFF;
     background-color: #E44848;
     font-weight: 500;
     font-size: 16px;
-    font-family: Inter;
+    text-decoration: none;
+    
     border-radius: 200px;
     border: none;
     

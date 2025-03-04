@@ -11,7 +11,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
     display: flex;
     justify-content: center;
-    height: 100%;
     background-color: #FFFFFF;
 }
 
@@ -36,10 +35,9 @@ ol {
   padding: 0;
 }
 img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 li {

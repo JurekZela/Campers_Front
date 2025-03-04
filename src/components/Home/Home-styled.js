@@ -8,7 +8,7 @@ export const Container = styled.div`
     align-content: center;
     flex-direction: column;
     padding-left: 64px;
-    width: 100%;
+    max-width: 1440px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -38,15 +38,16 @@ export const HomeSubTitle = styled.h2`
 export const HomeButton = styled(NavLink)`
     display: flex;
     justify-content: center;
+    cursor: pointer;
+    text-align: center;
     align-items: center;
     text-decoration: none;
     width: 173px;
-    height: 56px;
+    padding: 22px 49px 22px 49px;
     font-weight: 500;
     font-size: 16px;
     color: #FFFFFF;
     background-color: #E44848;
-    padding: 10px;
     margin-top: 20px;
     border: none;
     border-radius: 200px;
