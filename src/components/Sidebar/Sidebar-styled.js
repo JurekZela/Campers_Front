@@ -1,12 +1,13 @@
 import { styled } from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
-export const Block = styled.div`
+export const SidebarContainer = styled.div`
     display: flex;
     align-items: center;
     background-color: #F7F7F7;
     height: 72px;
-    min-width: 1440px;
+    width: 100vh;
+    min-width: 1550px;
     border: 1px solid #F2F4F7;
     padding-left: 64px;
 `;

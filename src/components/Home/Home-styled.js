@@ -8,12 +8,14 @@ export const Container = styled.div`
     align-content: center;
     flex-direction: column;
     padding-left: 64px;
-    max-width: 100%;
-    height: 700px;
+    width: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url("../../../images/background.svg");
+    height: 100vh;
+    text-align: center;
+    color: white;
+    background-image: url("/images/banner.svg");
 `;
 
 export const HomeTitle = styled.h1`
