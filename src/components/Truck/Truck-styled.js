@@ -2,17 +2,17 @@ import { styled } from 'styled-components';
 
 export const TruckContainer = styled.ul`
     display: block;
-    margin: 48px 0 0 auto;
-    width: 888px;
-    height: 368px;
+    margin-left: auto;
 `;
 
 export const TruckCard = styled.li`
     display: flex;
-    margin: 0 0 32px 0;
+    margin: 0 0 32px auto;
     padding: 23px 24px 23px 23px;
     border: 1px solid #DADDE1;
     border-radius: 20px;
+    width: 888px;
+    min-height: auto;
     
     &:last-child {
         margin-bottom: 0;
