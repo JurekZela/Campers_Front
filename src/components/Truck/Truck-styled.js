@@ -49,14 +49,21 @@ margin-left: 12px;
 `;
 
 export const Description = styled.p`
+    display: block;
     color: #475467;
     font-weight: 400;
     font-size: 16px;
 `;
 
 export const InfoLocMap = styled.div`
-display: flex;
-    margin: 20px 0 36px 12px;
+    display: flex;
+    margin: 20px 0 36px 0;
+    gap: 18px;
+`;
+
+export const HeardPrc = styled.div`
+    display: flex;
+    gap: 15px;
 `;
 
 export const Rating = styled.p`
@@ -71,6 +78,8 @@ export const Location = styled.p`
     display: flex;
     gap: 6px;
 `;
+
+export const BadgesContainer = styled.div``;
 
 export const ShowMore = styled.button`
     display: flex;

@@ -27,6 +27,7 @@ h5,
 h6,
 p {
   margin: 0;
+    font-style: inherit;
     font-family: Inter;
 }
 ul,

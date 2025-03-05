@@ -13,6 +13,8 @@ import {
   InfoLocMap,
   Rating,
   Location,
+  HeardPrc,
+  BadgesContainer,
 } from './Truck-styled.js';
 
 export default function Truck() {
@@ -26,7 +28,10 @@ export default function Truck() {
           <ListCardInfo>
             <InfoPriNam>
               <TruckName>{list.name}</TruckName>
-              <TruckPrice>€{list.price}</TruckPrice>
+              <HeardPrc>
+                <TruckPrice>€{list.price}</TruckPrice>
+                <img src="/icons/heart.svg"  alt="heart" width='26px' height='24px' />
+              </HeardPrc>
             </InfoPriNam>
             <InfoLocMap>
               <Rating>
@@ -36,6 +41,7 @@ export default function Truck() {
               <Location><img src="/icons/map.svg" alt="location" width='16px' height='16px' />{list.location}</Location>
             </InfoLocMap>
             <Description>{list.description}</Description>
+            <BadgesContainer></BadgesContainer>
             <ShowMore>Show More</ShowMore>
           </ListCardInfo>
         </TruckCard>
