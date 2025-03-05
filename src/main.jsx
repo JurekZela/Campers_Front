@@ -4,19 +4,15 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from 'react-redux';
 
 import App from './components/App/App.jsx'
-import { store, persistor } from './redux/store.js';
 import GlobalStyled from './GlobalStyled-styled.js'
-import { PersistGate } from 'redux-persist/integration/react';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
       <BrowserRouter>
         <App />
         <GlobalStyled />
       </BrowserRouter>
-      </PersistGate>
     </Provider>
   </StrictMode>,
 )

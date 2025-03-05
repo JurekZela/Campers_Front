@@ -1,7 +1,8 @@
-export default function DetailsPage () {
+export default function DetailsPageById () {
+
   return(
-    <div>
-      DetailsPage
-    </div>
-  )
-}
+    <>
+      Details
+    </>
+  );
+};
