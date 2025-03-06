@@ -9,8 +9,10 @@ const detailsSlice = createSlice({
   extraReducers: builder => {
     builder
       .addCase(fetchDetailsById.fulfilled, (state, action) => {
-        console.log(action.payload);
+        state.item = action.payload;
       })
+      .addCase(fetchDetailsById.rejected, (state, action) => {})
+      .addCase(fetchDetailsById.pending, (state, action) => {})
   }
 });
 

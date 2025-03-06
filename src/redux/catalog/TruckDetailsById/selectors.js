@@ -1,0 +1,1 @@
+export const selectTruckById = (state) => state.details.item;

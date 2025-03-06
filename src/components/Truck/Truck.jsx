@@ -1,5 +1,5 @@
-import { useSelector } from 'react-redux';
-import { selectTruck } from '../../redux/catalog/TruckInfo/selectors.js';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchDetailsById } from '../../redux/catalog/TruckDetailsById/operations.js';
 import {
   TruckContainer,
   TruckImg,
@@ -16,9 +16,14 @@ import {
   HeardPrc,
   BadgesContainer,
 } from './Truck-styled.js';
+import { selectTruck } from '../../redux/catalog/TruckInfo/selectors.js';
+
 
 export default function Truck() {
   const selectTrucks = useSelector(selectTruck);
+  const dispatch = useDispatch();
+
+  const handleTruckById = (e) => dispatch(fetchDetailsById(e));
 
   return (
     <TruckContainer>
@@ -42,7 +47,7 @@ export default function Truck() {
             </InfoLocMap>
             <Description>{list.description}</Description>
             <BadgesContainer></BadgesContainer>
-            <ShowMore>Show More</ShowMore>
+            <ShowMore to="/catalog/:id" onClick={() => handleTruckById(list)}>Show More</ShowMore>
           </ListCardInfo>
         </TruckCard>
       ))}

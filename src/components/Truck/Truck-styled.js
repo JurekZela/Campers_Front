@@ -1,4 +1,5 @@
 import { styled } from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 export const TruckContainer = styled.ul`
     display: block;
@@ -81,7 +82,7 @@ export const Location = styled.p`
 
 export const BadgesContainer = styled.div``;
 
-export const ShowMore = styled.button`
+export const ShowMore = styled(NavLink)`
     display: flex;
     justify-content: center;
     cursor: pointer;

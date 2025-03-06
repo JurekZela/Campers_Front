@@ -5,7 +5,6 @@ const fulfilledTrucks = (state, action) => {
   // state.isLoggedIn = true;
   // state.isRefreshing = false;
   state.items = action.payload.items;
-  console.log(action.payload.items);
 };
 
 const fetchTrucksRejected = (state, action) => {
@@ -23,6 +22,7 @@ const trucksSlice = createSlice({
     builder
       .addCase(fetchTrucks.fulfilled, fulfilledTrucks)
       .addCase(fetchTrucks.rejected, fetchTrucksRejected)
+      .addCase(fetchTrucks.pending, (state, action) => {})
   }
 });
 

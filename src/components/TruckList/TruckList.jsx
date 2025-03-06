@@ -3,7 +3,6 @@ import { CatalogContainer, LoadMore } from './TruckList-styled.js';
 
 export default function TruckList () {
 
-
   return (
     <CatalogContainer>
       <Truck />
