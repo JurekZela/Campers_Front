@@ -7,7 +7,8 @@ import { fetchTrucks } from '../../redux/catalog/TruckInfo/operations.js';
 const Home = lazy(() => import('../../pages/Home/HomePage.jsx'));
 const Catalog = lazy(() => import('../../pages/Catalog/CatalogPage.jsx'));
 const Details = lazy(() => import('../../pages/Details/DetailsPage.jsx'));
-const Reviews = lazy(() => import('../../pages/Reviews/ReviewsPage.jsx'));
+const Features = lazy(() => import('../../pages/Details/Features/Features.jsx'));
+const Reviews = lazy(() => import('../../pages/Details/Reviews/ReviewsPage.jsx'));
 const NotFound = lazy(() => import('../../pages/NotFound/NotFoundPage.jsx'));
 
 function App() {
@@ -22,8 +23,10 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/catalog" element={<Catalog />} />
-      <Route path="/catalog/:id" element={<Details />}/>
-      <Route path="/reviews" element={<Reviews />}/>
+      <Route path="/catalog/:id" element={<Details />}>
+        <Route path="features" element={<Features />}/>
+        <Route path="reviews" element={<Reviews />}/>
+      </Route>
       <Route path="*" element={<NotFound />}/>
     </Routes>
   </Layout>

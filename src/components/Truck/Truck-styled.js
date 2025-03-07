@@ -87,8 +87,11 @@ export const ShowMore = styled(NavLink)`
     justify-content: center;
     cursor: pointer;
     text-align: center;
-    min-width: 166px;
+    align-items: center;
     padding: 22px 41px 22px 41px;
+    width: 166px;
+    height: 56px;
+    
     color: #FFFFFF;
     background-color: #E44848;
     font-weight: 500;

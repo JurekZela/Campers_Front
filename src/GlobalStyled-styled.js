@@ -23,7 +23,7 @@ h3,
 h4,
 h5,
 h6,
-p {
+p, a {
   margin: 0;
     font-style: inherit;
     font-family: Inter;
