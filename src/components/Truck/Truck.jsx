@@ -22,8 +22,10 @@ import { selectTruck } from '../../redux/catalog/TruckInfo/selectors.js';
 export default function Truck() {
   const selectTrucks = useSelector(selectTruck);
   const dispatch = useDispatch();
-
-  const handleTruckById = (e) => dispatch(fetchDetailsById(e));
+  const handleShowMore = (list) => {
+    console.log(list);
+    dispatch(fetchDetailsById(list));
+  };
 
   return (
     <TruckContainer>
@@ -45,9 +47,8 @@ export default function Truck() {
               </Rating>
               <Location><img src="/icons/map.svg" alt="location" width='16px' height='16px' />{list.location}</Location>
             </InfoLocMap>
-            <Description>{list.description}</Description>
             <BadgesContainer></BadgesContainer>
-            <ShowMore to="/catalog/:id" onClick={() => handleTruckById(list)}>Show More</ShowMore>
+            <ShowMore to={`/campers/${list.id}`} onClick={() => handleShowMore(list)}>Show More</ShowMore>
           </ListCardInfo>
         </TruckCard>
       ))}

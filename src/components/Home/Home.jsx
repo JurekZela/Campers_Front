@@ -7,7 +7,7 @@ export default function Home() {
     <Container>
       <HomeTitle>Campers of your dreams</HomeTitle>
       <HomeSubTitle>You can find everything you want in our catalog</HomeSubTitle>
-      <HomeButton to="/catalog">View Now</HomeButton>
+      <HomeButton to="/campers">View Now</HomeButton>
     </Container>
   )
 }

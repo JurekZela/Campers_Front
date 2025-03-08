@@ -5,7 +5,7 @@ import Layout from '../Layout/Layout.jsx';
 import { fetchTrucks } from '../../redux/catalog/TruckInfo/operations.js';
 
 const Home = lazy(() => import('../../pages/Home/HomePage.jsx'));
-const Catalog = lazy(() => import('../../pages/Catalog/CatalogPage.jsx'));
+const Campers = lazy(() => import('../../pages/Campers/CampersPage.jsx'));
 const Details = lazy(() => import('../../pages/Details/DetailsPage.jsx'));
 const Features = lazy(() => import('../../pages/Details/Features/Features.jsx'));
 const Reviews = lazy(() => import('../../pages/Details/Reviews/ReviewsPage.jsx'));
@@ -22,8 +22,8 @@ function App() {
   <Layout>
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/catalog" element={<Catalog />} />
-      <Route path="/catalog/:id" element={<Details />}>
+      <Route path="/campers" element={<Campers />} />
+      <Route path="/campers/:truckId" element={<Details />}>
         <Route path="features" element={<Features />}/>
         <Route path="reviews" element={<Reviews />}/>
       </Route>

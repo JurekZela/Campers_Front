@@ -6,7 +6,7 @@ export default function Sidebar() {
       <img src="/images/TravelTrucks.svg" width="136px" height="15px" alt="sidebar logo" loading='lazy' />
       <HeaderMenu>
         <HeaderHome to="/">Home</HeaderHome>
-        <HeaderCatalog to="/catalog">Catalog</HeaderCatalog>
+        <HeaderCatalog to="/campers">Catalog</HeaderCatalog>
       </HeaderMenu>
     </SidebarContainer>
   )
