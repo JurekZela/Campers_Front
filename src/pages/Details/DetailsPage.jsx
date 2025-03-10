@@ -5,8 +5,8 @@ export default function DetailsPageById () {
   return(
     <>
      <AccurateInfoTruck />
-      <NavLink to="reviews">Reviews</NavLink>
       <NavLink to="features">Features</NavLink>
+      <NavLink to="reviews">Reviews</NavLink>
       <Outlet />
     </>
   );

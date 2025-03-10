@@ -13,7 +13,8 @@ export const TruckCard = styled.li`
     border: 1px solid #DADDE1;
     border-radius: 20px;
     width: 888px;
-    min-height: auto;
+    min-height: 368px;
+    height: auto;
     
     &:last-child {
         margin-bottom: 0;
@@ -40,7 +41,9 @@ export const TruckPrice = styled.p`
 `;
 
 export const TruckImg = styled.img`
-    width: 292px;
+    max-width: 292px;
+    height: auto;
+    object-fit: cover;
     margin-right: 12px;
     border-radius: 10px;
 `;
@@ -79,8 +82,6 @@ export const Location = styled.p`
     display: flex;
     gap: 6px;
 `;
-
-export const BadgesContainer = styled.div``;
 
 export const ShowMore = styled(NavLink)`
     display: flex;

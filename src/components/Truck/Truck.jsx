@@ -14,18 +14,20 @@ import {
   Rating,
   Location,
   HeardPrc,
-  BadgesContainer,
 } from './Truck-styled.js';
 import { selectTruck } from '../../redux/catalog/TruckInfo/selectors.js';
+import Categories from '../Categories/Categories.jsx';
 
 
 export default function Truck() {
   const selectTrucks = useSelector(selectTruck);
   const dispatch = useDispatch();
+
   const handleShowMore = (list) => {
-    console.log(list);
     dispatch(fetchDetailsById(list));
   };
+
+  console.log(selectTrucks);
 
   return (
     <TruckContainer>
@@ -47,7 +49,8 @@ export default function Truck() {
               </Rating>
               <Location><img src="/icons/map.svg" alt="location" width='16px' height='16px' />{list.location}</Location>
             </InfoLocMap>
-            <BadgesContainer></BadgesContainer>
+            <Description>{list.description}</Description>
+            <Categories children="Automatic" />
             <ShowMore to={`/campers/${list.id}`} onClick={() => handleShowMore(list)}>Show More</ShowMore>
           </ListCardInfo>
         </TruckCard>
