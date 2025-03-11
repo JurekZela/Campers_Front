@@ -83,6 +83,21 @@ export const Location = styled.p`
     gap: 6px;
 `;
 
+export const Categories = styled.ul`
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+`;
+
+export const Categorie = styled.li`
+    display: flex;
+    background-color: #F2F4F7;
+    font-weight: 500;
+    font-size: 16px;
+    color: #101828;
+    border-radius: 100px;
+`;
+
 export const ShowMore = styled(NavLink)`
     display: flex;
     justify-content: center;
