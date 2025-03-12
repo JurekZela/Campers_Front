@@ -27,7 +27,7 @@ export default function Truck() {
   const handleShowMore = (list) => {
     dispatch(fetchDetailsById(list));
   };
-  console.log(selectTrucks);
+
   return (
     <TruckContainer>
       {selectTrucks.map((list) => (
@@ -37,7 +37,7 @@ export default function Truck() {
             <InfoPriNam>
               <TruckName>{list.name}</TruckName>
               <HeardPrc>
-                <TruckPrice>€{list.price}</TruckPrice>
+                <TruckPrice>€{list.price}.00</TruckPrice>
                 <img src="/icons/heart.svg"  alt="heart" width='26px' height='24px' />
               </HeardPrc>
             </InfoPriNam>

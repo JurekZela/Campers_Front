@@ -87,10 +87,13 @@ export const Categories = styled.ul`
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+    margin: 26px 0 23px 0;
 `;
 
 export const Categorie = styled.li`
     display: flex;
+    gap: 9px;
+    padding: 14px 18px;
     background-color: #F2F4F7;
     font-weight: 500;
     font-size: 16px;
