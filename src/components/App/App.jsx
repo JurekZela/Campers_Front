@@ -1,8 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
-import { lazy, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { lazy } from 'react';
 import Layout from '../Layout/Layout.jsx';
-import { fetchTrucks } from '../../redux/catalog/TruckInfo/operations.js';
 
 const Home = lazy(() => import('../../pages/Home/HomePage.jsx'));
 const Campers = lazy(() => import('../../pages/Campers/CampersPage.jsx'));
@@ -12,11 +10,6 @@ const Reviews = lazy(() => import('../../pages/Details/Reviews/ReviewsPage.jsx')
 const NotFound = lazy(() => import('../../pages/NotFound/NotFoundPage.jsx'));
 
 function App() {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchTrucks())
-  }, [dispatch]);
 
   return (
   <Layout>
