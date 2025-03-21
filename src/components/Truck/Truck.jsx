@@ -21,15 +21,23 @@ import {
 
 export default function Truck() {
   const items = useSelector(selectTruck);
-
   const dispatch = useDispatch();
+  console.log(items);
   const handleShowMore = (id) => {
     dispatch(fetchDetailsById(id));
   };
 
+
+  const renderCategory = (icon, label) => (
+    <Categorie>
+      <img src={icon} alt={label} width="20px" height="20px" />
+      {label}
+    </Categorie>
+  );
+
   return (
     <TruckContainer>
-      {items.map(item => (
+      {items.map((item) => (
         <TruckCard key={item.id}>
           {item.gallery?.[0]?.thumb && (
             <TruckImg src={item.gallery[0].thumb} alt={item.name} />
@@ -47,6 +55,7 @@ export default function Truck() {
                 />
               </HeardPrc>
             </InfoPriNam>
+
             <InfoLocMap>
               {item.rating !== undefined && (
                 <Rating>
@@ -56,7 +65,7 @@ export default function Truck() {
                     width="16px"
                     height="16px"
                   />
-                  {`${item.rating} (${item.reviews?.length || 0} Reviews)`}
+                  {item.rating} ({item.reviews?.length || 0} Reviews)
                 </Rating>
               )}
               {item.location && (
@@ -71,134 +80,24 @@ export default function Truck() {
                 </Location>
               )}
             </InfoLocMap>
+
             <Description>{item.description}</Description>
+
             <Categories>
-              {item.transmission && (
-                <Categorie>
-                  <img
-                    src="/icons/transmission.svg"
-                    alt="transmission"
-                    width="20px"
-                    height="20px"
-                  />
-                  {item.transmission}
-                </Categorie>
-              )}
-              {item.engine && (
-                <Categorie>
-                  <img
-                    src="/icons/engine.svg"
-                    alt="engine"
-                    width="20px"
-                    height="20px"
-                  />
-                  {item.engine}
-                </Categorie>
-              )}
-              {item.kitchen && (
-                <Categorie>
-                  <img
-                    src="/icons/kitchen.svg"
-                    alt="kitchen"
-                    width="20px"
-                    height="20px"
-                  />
-                  Kitchen
-                </Categorie>
-              )}
-              {item.AC && (
-                <Categorie>
-                  <img
-                    src="/icons/ac.svg"
-                    alt="ac"
-                    width="20px"
-                    height="20px"
-                  />
-                  AC
-                </Categorie>
-              )}
-              {item.TV && (
-                <Categorie>
-                  <img
-                    src="/icons/tv.svg"
-                    alt="TV"
-                    width="20px"
-                    height="20px"
-                  />
-                  TV
-                </Categorie>
-              )}
-              {item.radio && (
-                <Categorie>
-                  <img
-                    src="/icons/ui-radios.svg"
-                    alt="radio"
-                    width="20px"
-                    height="20px"
-                  />
-                  Radio
-                </Categorie>
-              )}
-              {item.bathroom && (
-                <Categorie>
-                  <img
-                    src="/icons/ph_shower.svg"
-                    alt="bathroom"
-                    width="20px"
-                    height="20px"
-                  />
-                  Bathroom
-                </Categorie>
-              )}
-              {item.refrigerator && (
-                <Categorie>
-                  <img
-                    src="/icons/refrigerator.svg"
-                    alt="refrigerator"
-                    width="20px"
-                    height="20px"
-                  />
-                  Refrigerator
-                </Categorie>
-              )}
-              {item.microwave && (
-                <Categorie>
-                  <img
-                    src="/icons/microwave.svg"
-                    alt="microwave"
-                    width="20px"
-                    height="20px"
-                  />
-                  Microwave
-                </Categorie>
-              )}
-              {item.gas && (
-                <Categorie>
-                  <img
-                    src="/icons/gas.svg"
-                    alt="gas"
-                    width="20px"
-                    height="20px"
-                  />
-                  Gas
-                </Categorie>
-              )}
-              {item.water && (
-                <Categorie>
-                  <img
-                    src="/icons/water.svg"
-                    alt="water"
-                    width="20px"
-                    height="20px"
-                  />
-                  Water
-                </Categorie>
-              )}
+              {item.transmission && renderCategory("/icons/transmission.svg", item.transmission)}
+              {item.engine && renderCategory("/icons/engine.svg", item.engine)}
+              {item.kitchen && renderCategory("/icons/kitchen.svg", "Kitchen")}
+              {item.AC && renderCategory("/icons/ac.svg", "AC")}
+              {item.TV && renderCategory("/icons/tv.svg", "TV")}
+              {item.radio && renderCategory("/icons/ui-radios.svg", "Radio")}
+              {item.bathroom && renderCategory("/icons/ph_shower.svg", "Bathroom")}
+              {item.refrigerator && renderCategory("/icons/refrigerator.svg", "Refrigerator")}
+              {item.microwave && renderCategory("/icons/microwave.svg", "Microwave")}
+              {item.gas && renderCategory("/icons/gas.svg", "Gas")}
+              {item.water && renderCategory("/icons/water.svg", "Water")}
             </Categories>
-            <ShowMore
-              to={`/campers/${item.id}`}
-              onClick={() => handleShowMore({ id: item.id })}
-            >
+
+            <ShowMore to={`/campers/${item.id}`} onClick={() => handleShowMore(item.id)}>
               Show More
             </ShowMore>
           </ListCardInfo>

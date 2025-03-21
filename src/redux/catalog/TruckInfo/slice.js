@@ -1,15 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchTrucks,fetchLoadMore } from './operations.js';
+import { fetchTrucks } from './operations.js';
 
 const fulfilledTrucks = (state, action) => {
   // state.isLoggedIn = true;
   // state.isRefreshing = false;
-  state.total = action.payload.total;
-  state.items = action.payload.items;
-
-  if (state.page * 4 >= state.total){
-    state.page = 1;
-  }
+  // state.total = action.payload.total;
+  state.items.push(action.payload.items)
 };
 
 const fetchTrucksRejected = (state, action) => {
@@ -18,14 +14,13 @@ const fetchTrucksRejected = (state, action) => {
 }
 
 const trucksSlice = createSlice({
-  name: "trucks",
+  name: "truck",
 
   initialState: {
     items: [],
-    error: false,
     page: 1,
     limit: 4,
-    total: 23,
+    error: null,
   },
 
   extraReducers: builder => {
@@ -34,16 +29,6 @@ const trucksSlice = createSlice({
       .addCase(fetchTrucks.rejected, fetchTrucksRejected)
       .addCase(fetchTrucks.pending, (state, action) => {
       })
-      .addCase(fetchLoadMore.fulfilled, (state, action) => {
-        state.items = action.payload.items;
-        state.page += 1;
-        state.limit += 4;
-
-        if (state.page * 4 >= state.total) {
-          state.page = 1;
-          state.limit = 4;
-        }
-    })
   }
 });
 export default trucksSlice.reducer;
