@@ -98,7 +98,7 @@ export default function Truck() {
               {item.water && renderCategory("/icons/water.svg", "Water")}
             </Categories>
 
-            <ShowMore to={`/campers/${item.id}`} onClick={() => handleShowMore(item.id)}>
+            <ShowMore to={`/campers/${item.id}`} onClick={() => handleShowMore({id: item.id})}>
               Show More
             </ShowMore>
           </ListCardInfo>

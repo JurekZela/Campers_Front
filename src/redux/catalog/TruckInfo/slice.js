@@ -2,16 +2,16 @@ import { createSlice } from "@reduxjs/toolkit";
 import { fetchTrucks } from './operations.js';
 
 const fulfilledTrucks = (state, action) => {
-  // state.isLoggedIn = true;
-  // state.isRefreshing = false;
-  // state.total = action.payload.total;
+  state.error = null;
+  state.isLoading = false;
+
   state.items = [...state.items, ...action.payload.items];
   state.page += 1;
   state.total = action.payload.total;
 };
 
 const fetchTrucksRejected = (state, action) => {
-  // state.isLoading = false;
+  state.isLoading = false;
   state.error = action.payload;
 }
 
@@ -23,6 +23,7 @@ const trucksSlice = createSlice({
     page: 1,
     limit: 4,
     error: null,
+    isLoading: false,
   },
 
   extraReducers: builder => {
@@ -30,6 +31,7 @@ const trucksSlice = createSlice({
       .addCase(fetchTrucks.fulfilled, fulfilledTrucks)
       .addCase(fetchTrucks.rejected, fetchTrucksRejected)
       .addCase(fetchTrucks.pending, (state, action) => {
+        state.isLoading = true;
       })
   }
 });

@@ -7,7 +7,7 @@ import App from './components/App/App.jsx'
 import GlobalStyled from './GlobalStyled-styled.js'
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  // <StrictMode>
     <Provider store={store}>
       <BrowserRouter>
         <App />
