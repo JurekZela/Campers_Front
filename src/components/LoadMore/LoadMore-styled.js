@@ -18,6 +18,7 @@ export const LoadMoreBtn = styled.button`
     font-size: 16px;
     margin-top: 17px;
     margin-left: auto;
+    margin-right: 367px;
     
     &:hover {
         border: 1px solid #D84343;
