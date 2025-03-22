@@ -8,7 +8,7 @@ export default function LoadMore() {
   let page = useSelector(selectPage);
   let limit = useSelector(selectLimit);
 
-  const handleLoadMore = () => dispatch(fetchTrucks());
+  const handleLoadMore = () => dispatch(fetchTrucks({ page, limit }));
 
   return (
     <>

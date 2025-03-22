@@ -5,7 +5,9 @@ const fulfilledTrucks = (state, action) => {
   // state.isLoggedIn = true;
   // state.isRefreshing = false;
   // state.total = action.payload.total;
-  state.items.push(action.payload.items)
+  state.items = [...state.items, ...action.payload.items];
+  state.page += 1;
+  state.total = action.payload.total;
 };
 
 const fetchTrucksRejected = (state, action) => {

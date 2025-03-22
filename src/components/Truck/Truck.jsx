@@ -20,9 +20,10 @@ import {
 } from './Truck-styled.js';
 
 export default function Truck() {
-  const items = useSelector(selectTruck);
   const dispatch = useDispatch();
-  console.log(items);
+
+  const items = useSelector(selectTruck);
+
   const handleShowMore = (id) => {
     dispatch(fetchDetailsById(id));
   };
