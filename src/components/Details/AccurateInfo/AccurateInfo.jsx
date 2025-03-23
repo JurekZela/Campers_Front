@@ -3,13 +3,10 @@ import { nanoid } from 'nanoid'
 import { selectTruckById } from '../../../redux/catalog/TruckDetailsById/selectors.js';
 import {
   Description,
-  InfoLocMap,
   Location,
-  Rating,
   TruckName,
-  TruckPrice,
 } from '../../Truck/TruckInfo-styled.js';
-import { DetailsImages } from './AccurateInfo-styled.js';
+import { DetailsImages, ImgContainer, RatLoc, Reviews, Price, AccurateContainer } from './AccurateInfo-styled.js';
 
 
 export default function AccurateInfoTruck () {
@@ -17,11 +14,11 @@ export default function AccurateInfoTruck () {
   const gallery = selectDetailsById.gallery;
 
   return(
-    <div>
+    <AccurateContainer>
         <TruckName>{selectDetailsById.name}</TruckName>
-        <InfoLocMap>
+        <RatLoc>
           {selectDetailsById.rating !== undefined && (
-            <Rating>
+            <Reviews>
               <img
                 src="/icons/Rating.svg"
                 alt="rating"
@@ -29,7 +26,7 @@ export default function AccurateInfoTruck () {
                 height="16px"
               />
               {selectDetailsById.rating} ({selectDetailsById.reviews?.length || 0} Reviews)
-            </Rating>
+            </Reviews>
           )}
           {selectDetailsById.location && (
             <Location>
@@ -42,13 +39,15 @@ export default function AccurateInfoTruck () {
               {selectDetailsById.location}
             </Location>
           )}
-        </InfoLocMap>
-        <TruckPrice>€{selectDetailsById.price}.00</TruckPrice>
-      {gallery && (gallery.map((img) => (
-        <DetailsImages key={nanoid()} src={img.original} alt={selectDetailsById.name} />
-      ))
+        </RatLoc>
+        <Price>€{selectDetailsById.price}.00</Price>
+      <ImgContainer>
+        {gallery && (gallery.map((img) => (
+            <DetailsImages key={nanoid()} src={img.original} alt={selectDetailsById.name} />
+        ))
       )}
+      </ImgContainer>
         <Description>{selectDetailsById.description}</Description>
-    </div>
+    </AccurateContainer>
   );
 };
