@@ -17,7 +17,7 @@ import {
   HeardPrc,
   Categories,
   Categorie,
-} from './Truck-styled.js';
+} from './TruckInfo-styled.js';
 
 export default function Truck() {
   const dispatch = useDispatch();
