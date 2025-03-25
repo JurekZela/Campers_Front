@@ -53,7 +53,11 @@ margin-left: 12px;
 `;
 
 export const Description = styled.p`
-    display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
     color: #475467;
     font-weight: 400;
     font-size: 16px;
