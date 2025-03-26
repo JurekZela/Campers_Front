@@ -2,7 +2,8 @@ import { styled } from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const TabsContainer = styled.div`
-  border-top: 1px solid #DADDE1;
+    border-bottom: 1px solid #DADDE1;
+    padding-bottom: 28px;
 `;
 
 export const TabFeatures = styled(NavLink)`
