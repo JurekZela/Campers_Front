@@ -4,9 +4,7 @@ import { useDispatch } from 'react-redux';
 export default function Sidebar() {
   const dispatch = useDispatch();
 
-  const changeInitialStatePage = () => dispatch(({
-    page: 1,
-  }))
+  const changeInitialStatePage = () => dispatch({page: 1,});
 
   return (
     <SidebarContainer>

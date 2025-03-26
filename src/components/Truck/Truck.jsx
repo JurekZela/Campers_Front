@@ -21,13 +21,11 @@ import {
 
 export default function Truck() {
   const dispatch = useDispatch();
-
   const items = useSelector(selectTruck);
 
   const handleShowMore = (id) => {
     dispatch(fetchDetailsById(id));
   };
-
 
   const renderCategory = (icon, label) => (
     <Categorie>
