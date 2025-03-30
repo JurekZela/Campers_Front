@@ -1,13 +1,14 @@
 import { useSelector } from 'react-redux';
 import { selectTruckById } from '../../redux/catalog/TruckDetailsById/selectors.js';
 import { renderCategory } from '../Categorie/Categorie.jsx';
-import { DetailsCategories } from '../Categorie/Categorie-styled.js'
+import renderVehicleDetails from '../renderVehicleDetails/renderVehicleDetails.jsx';
+import { DetailsCategories, VehicleDetailsText, DetailsContainer } from './Features-styled.js'
 
 export default function FeaturesPage () {
   const camperDetailsInfo = useSelector(selectTruckById);
-
+  console.log(camperDetailsInfo);
   return(
-    <div>
+    <DetailsContainer>
       <DetailsCategories>
         {camperDetailsInfo.transmission && renderCategory("/icons/transmission.svg", camperDetailsInfo.transmission)}
         {camperDetailsInfo.engine && renderCategory("/icons/engine.svg", camperDetailsInfo.engine)}
@@ -21,6 +22,15 @@ export default function FeaturesPage () {
         {camperDetailsInfo.gas && renderCategory("/icons/gas.svg", "Gas")}
         {camperDetailsInfo.water && renderCategory("/icons/water.svg", "Water")}
       </DetailsCategories>
-    </div>
+      <VehicleDetailsText>Vehicle details</VehicleDetailsText>
+      <ul>
+        {camperDetailsInfo.form && renderVehicleDetails('Form', camperDetailsInfo.form)}
+        {camperDetailsInfo.length && renderVehicleDetails('Length', camperDetailsInfo.length)}
+        {camperDetailsInfo.width && renderVehicleDetails('Width', camperDetailsInfo.width)}
+        {camperDetailsInfo.height && renderVehicleDetails('Height', camperDetailsInfo.height)}
+        {camperDetailsInfo.tank && renderVehicleDetails('Tank', camperDetailsInfo.tank)}
+        {camperDetailsInfo.consumption && renderVehicleDetails('Consumption', camperDetailsInfo.consumption)}
+      </ul>
+    </DetailsContainer>
   )
 }
