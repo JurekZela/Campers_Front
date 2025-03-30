@@ -94,17 +94,6 @@ export const Categories = styled.ul`
     margin: 26px 0 23px 0;
 `;
 
-export const Categorie = styled.li`
-    display: flex;
-    gap: 9px;
-    padding: 14px 18px;
-    background-color: #F2F4F7;
-    font-weight: 500;
-    font-size: 16px;
-    color: #101828;
-    border-radius: 100px;
-`;
-
 export const ShowMore = styled(NavLink)`
     display: flex;
     justify-content: center;

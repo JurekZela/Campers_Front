@@ -16,8 +16,8 @@ import {
   Location,
   HeardPrc,
   Categories,
-  Categorie,
 } from './TruckInfo-styled.js';
+import { renderCategory } from '../Categorie/Categorie.jsx';
 
 export default function Truck() {
   const dispatch = useDispatch();
@@ -27,12 +27,12 @@ export default function Truck() {
     dispatch(fetchDetailsById(id));
   };
 
-  const renderCategory = (icon, label) => (
-    <Categorie>
-      <img src={icon} alt={label} width="20px" height="20px" />
-      {label}
-    </Categorie>
-  );
+  // const renderCategory = (icon, label) => (
+  //   <Categorie>
+  //     <img src={icon} alt={label} width="20px" height="20px" />
+  //     {label}
+  //   </Categorie>
+  // );
 
   return (
     items &&( <TruckContainer>
