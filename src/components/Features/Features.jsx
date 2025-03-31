@@ -6,7 +6,7 @@ import { DetailsCategories, VehicleDetailsText, DetailsContainer } from './Featu
 
 export default function FeaturesPage () {
   const camperDetailsInfo = useSelector(selectTruckById);
-  console.log(camperDetailsInfo);
+
   return(
     <DetailsContainer>
       <DetailsCategories>
