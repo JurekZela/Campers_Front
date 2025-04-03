@@ -1,9 +1,10 @@
+import {Vehicles, VehicleInfo} from "./RenderVehicleDetails-styled.js";
 
 export default  function renderVehicleDetails(name, value) {
 return (
-  <li>
-    <p>{name}</p>
-    <p>{value}</p>
-  </li>
+  <Vehicles>
+    <VehicleInfo>{name}</VehicleInfo>
+    <VehicleInfo>{value}</VehicleInfo>
+  </Vehicles>
 )
 };

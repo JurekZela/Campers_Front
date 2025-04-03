@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import { selectTruckById } from '../../redux/catalog/TruckDetailsById/selectors.js';
 import { renderCategory } from '../Categorie/Categorie.jsx';
 import renderVehicleDetails from '../renderVehicleDetails/renderVehicleDetails.jsx';
-import { DetailsCategories, VehicleDetailsText, DetailsContainer } from './Features-styled.js'
+import { DetailsCategories, VehicleDetailsText, DetailsContainer, VehicleDetailsContainer } from './Features-styled.js'
 
 export default function FeaturesPage () {
   const camperDetailsInfo = useSelector(selectTruckById);
@@ -22,15 +22,17 @@ export default function FeaturesPage () {
         {camperDetailsInfo.gas && renderCategory("/icons/gas.svg", "Gas")}
         {camperDetailsInfo.water && renderCategory("/icons/water.svg", "Water")}
       </DetailsCategories>
-      <VehicleDetailsText>Vehicle details</VehicleDetailsText>
-      <ul>
-        {camperDetailsInfo.form && renderVehicleDetails('Form', camperDetailsInfo.form)}
-        {camperDetailsInfo.length && renderVehicleDetails('Length', camperDetailsInfo.length)}
-        {camperDetailsInfo.width && renderVehicleDetails('Width', camperDetailsInfo.width)}
-        {camperDetailsInfo.height && renderVehicleDetails('Height', camperDetailsInfo.height)}
-        {camperDetailsInfo.tank && renderVehicleDetails('Tank', camperDetailsInfo.tank)}
-        {camperDetailsInfo.consumption && renderVehicleDetails('Consumption', camperDetailsInfo.consumption)}
-      </ul>
+        <div>
+            <VehicleDetailsText>Vehicle details</VehicleDetailsText>
+            <VehicleDetailsContainer>
+                {camperDetailsInfo.form && renderVehicleDetails('Form', camperDetailsInfo.form)}
+                {camperDetailsInfo.length && renderVehicleDetails('Length', camperDetailsInfo.length)}
+                {camperDetailsInfo.width && renderVehicleDetails('Width', camperDetailsInfo.width)}
+                {camperDetailsInfo.height && renderVehicleDetails('Height', camperDetailsInfo.height)}
+                {camperDetailsInfo.tank && renderVehicleDetails('Tank', camperDetailsInfo.tank)}
+                {camperDetailsInfo.consumption && renderVehicleDetails('Consumption', camperDetailsInfo.consumption)}
+            </VehicleDetailsContainer>
+        </div>
     </DetailsContainer>
   )
 }
