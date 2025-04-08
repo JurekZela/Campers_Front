@@ -1,12 +1,46 @@
-# React + Vite
+# 🚐 TravelTrucks – Camper Van Rental App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🧑‍💻 Autor
 
-Currently, two official plugins are available:
+- Name and Last Name: Juri Zelabowski
+- GitHub: [@JurekZela](https://github.com/JurekZela)
+- Email: juri.zelabowski@gmail.com
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+TravelTrucks is a web application that allows you to browse, filter and book campers for rent. A project created as part of learning React.js and Node.js, using a mock API.
 
-## Expanding the ESLint configuration
+## 🔗 Demo
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+👉 [Look Demo online](https://campers-front-tan.vercel.app)
+
+## 📸 Screenshots
+
+| Główna strona | Szczegóły pojazdu | Panel rezerwacji |
+|---------------|------------------|------------------|
+| ![](./screenshots/home.png) | ![](./screenshots/details.png) | ![](./screenshots/booking.png) |
+
+## ⚙️ Stack Technology
+
+**Frontend:**
+- React.js
+- Redux Toolkit
+- styled-components
+- React Router
+
+**Backend:**
+- MockAPI ([mockapi.io](https://mockapi.io))
+- JSON Server (for lokal tests)
+
+## 🚀 How to run a project locally
+
+### Requirements
+
+- Node.js (min v18)
+- npm or yarn
+
+
+### Installation
+
+```bash
+git clone git@github.com:JurekZela/Campers_Front.git
+cd Campers_Front
+npm install
