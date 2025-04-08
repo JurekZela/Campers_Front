@@ -40,7 +40,7 @@ export default function AccurateInfoTruck () {
             </Location>
           )}
         </RatLoc>
-        <Price>€{selectDetailsById.price}.00</Price>
+        <Price>€{selectDetailsById.price}</Price>
       <ImgContainer>
         {gallery && (gallery.map((img) => (
             <DetailsImages key={nanoid()} src={img.original} alt={selectDetailsById.name} />

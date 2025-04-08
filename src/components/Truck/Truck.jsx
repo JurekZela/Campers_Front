@@ -27,13 +27,6 @@ export default function Truck() {
     dispatch(fetchDetailsById(id));
   };
 
-  // const renderCategory = (icon, label) => (
-  //   <Categorie>
-  //     <img src={icon} alt={label} width="20px" height="20px" />
-  //     {label}
-  //   </Categorie>
-  // );
-
   return (
     items &&( <TruckContainer>
           {items.map((item) => (
@@ -45,7 +38,7 @@ export default function Truck() {
                 <InfoPriNam>
                   <TruckName>{item.name}</TruckName>
                   <HeardPrc>
-                    <TruckPrice>€{item.price}.00</TruckPrice>
+                    <TruckPrice>€{item.price}</TruckPrice>
                     <img
                       src="/icons/heart.svg"
                       alt="heart"
