@@ -23,8 +23,15 @@ TravelTrucks is a web application that allows you to browse, filter and book cam
 **Frontend:**
 - React.js
 - Redux Toolkit
+- Mui/material
 - styled-components
+- Reduxjs/toolkit
 - React Router
+- Formik
+- Redux-persist
+- React-toastify
+- Nanoid
+- Axios
 
 **Backend:**
 - MockAPI ([mockapi.io](https://mockapi.io))
