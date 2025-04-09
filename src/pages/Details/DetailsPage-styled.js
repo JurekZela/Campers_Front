@@ -6,6 +6,10 @@ export const TabsContainer = styled.div`
     padding-bottom: 28px;
 `;
 
+export const MoreInfoFormContainer = styled.div`
+  display: flex;
+`;
+
 export const TabFeatures = styled(NavLink)`
     margin-right: 20px;
     font-weight: 600;

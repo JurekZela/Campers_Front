@@ -1,5 +1,5 @@
-import { ReservationContainer } from './ReservationForm-styled.js';
 import { Formik, Field, Form } from 'formik';
+import { ReservationContainer, HeaderForm, TextForm, ButtonForm } from './ReservationForm-styled.js';
 
 export default function ReservationForm() {
   return (
@@ -16,20 +16,18 @@ export default function ReservationForm() {
         }}
       >
         <Form>
-          <label htmlFor="firstName">First Name</label>
-          <Field id="firstName" name="firstName" placeholder="Jane" />
-
-          <label htmlFor="lastName">Last Name</label>
-          <Field id="lastName" name="lastName" placeholder="Doe" />
-
-          <label htmlFor="email">Email</label>
+          <HeaderForm>Book your campervan now</HeaderForm>
+          <TextForm>Stay connected! We are always ready to help you.</TextForm>
+          <Field id="name" name="name" placeholder="Name*" />
           <Field
             id="email"
             name="email"
-            placeholder="jane@acme.com"
+            placeholder="Email*"
             type="email"
           />
-          <button type="submit">Submit</button>
+          <Field id="date" name="date" label="00-00-00" placeholder="Booking Date*" />
+          <Field id="comment" name="comment" label="Comment" placeholder="Comment"  />
+          <ButtonForm type="submit">Send</ButtonForm>
         </Form>
       </Formik>
     </ReservationContainer>

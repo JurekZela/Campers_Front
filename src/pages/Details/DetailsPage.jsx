@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import AccurateInfoTruck from '../../components/Details/AccurateInfo/AccurateInfo.jsx';
 import Catalogs from '../../components/Catalogs/Catalogs.jsx';
-import { TabsContainer, TabReviews, TabFeatures } from  './DetailsPage-styled.js';
+import { TabsContainer, MoreInfoFormContainer, TabReviews, TabFeatures } from  './DetailsPage-styled.js';
 import ReservationForm from '../../components/ReservationForm/ReservationForm.jsx';
 
 export default function DetailsPageById () {
@@ -12,8 +12,10 @@ export default function DetailsPageById () {
         <TabFeatures to="features">Features</TabFeatures>
         <TabReviews to="reviews">Reviews</TabReviews>
       </TabsContainer>
-      <Outlet />
-      <ReservationForm/>
+      <MoreInfoFormContainer>
+        <Outlet/>
+        <ReservationForm />
+      </MoreInfoFormContainer>
     </Catalogs>
   );
 };
