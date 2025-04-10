@@ -1,10 +1,12 @@
 import { styled } from 'styled-components';
+import { Field, Form } from 'formik';
 
 export const ReservationContainer = styled.div`
     width: 641px;
     border: 1px solid #DADDE1;
     border-radius: 10px;
     margin-top: 46px;
+    margin-left: 42px;
     padding: 44px 56px 44px 56px;
 `;
 
@@ -13,6 +15,7 @@ export const HeaderForm = styled.h3`
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
+    margin-bottom: 7px;
     
 `;
 
@@ -21,7 +24,15 @@ export const TextForm = styled.p`
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
+    margin-bottom: 17px;
 `;
+
+export const FormStyle = styled(Form)`
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+`;
+
 
 export const ButtonForm = styled.button`
     display: flex;
@@ -40,4 +51,56 @@ export const ButtonForm = styled.button`
     &:hover {
         background-color: #D84343;
     }
+`;
+
+export const NameForm = styled(Field)`
+    color: #6C717B;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    
+    background-color: #F7F7F7;
+    border-radius: 12px;
+    border: none;
+    padding: 18px 337px 18px 18px;
+    
+    &:hover {
+        border: none;
+    }
+`;
+
+export const EmailForm = styled(Field)`
+    color: #6C717B;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    
+    background-color: #F7F7F7;
+    border-radius: 12px;
+    border: none;
+    padding: 18px 341px 18px 18px;
+`;
+
+export const BookingDateForm = styled(Field)`
+    color: #6C717B;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    
+    background-color: #F7F7F7;
+    border-radius: 12px;
+    border: none;
+    padding: 18px 282px 18px 18px;
+`;
+
+export const CommentForm = styled(Field)`
+    color: #6C717B;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    
+    background-color: #F7F7F7;
+    border-radius: 12px;
+    border: none;
+    padding: 18px 308px 76px 18px;
 `;
