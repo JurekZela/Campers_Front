@@ -30,14 +30,12 @@ export const TextForm = styled.p`
 export const FormStyle = styled(Form)`
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 14px;
 `;
 
 
 export const ButtonForm = styled.button`
-    display: flex;
-    align-content: center;
-    justify-content: center;
+    margin: 0 auto;
     background-color: #E44848;
     color: #FFFFFF;
     font-weight: 500;
@@ -63,9 +61,19 @@ export const NameForm = styled(Field)`
     border-radius: 12px;
     border: none;
     padding: 18px 337px 18px 18px;
-    
-    &:hover {
-        border: none;
+
+
+    &::placeholder {
+        color: #6C717B;
+        transition: color 0.2s ease;
+    }
+
+    &:focus::placeholder {
+        color: #101828;
+    }
+
+    &:focus {
+        outline: none;
     }
 `;
 
@@ -79,6 +87,19 @@ export const EmailForm = styled(Field)`
     border-radius: 12px;
     border: none;
     padding: 18px 341px 18px 18px;
+
+    &::placeholder {
+        color: #6C717B;
+        transition: color 0.2s ease;
+    }
+
+    &:focus::placeholder {
+        color: #101828;
+    }
+
+    &:focus {
+        outline: none;
+    }
 `;
 
 export const BookingDateForm = styled(Field)`
@@ -91,6 +112,19 @@ export const BookingDateForm = styled(Field)`
     border-radius: 12px;
     border: none;
     padding: 18px 282px 18px 18px;
+
+    &::placeholder {
+        color: #6C717B;
+        transition: color 0.2s ease;
+    }
+
+    &:focus::placeholder {
+        color: #101828;
+    }
+
+    &:focus {
+        outline: none;
+    }
 `;
 
 export const CommentForm = styled(Field)`
@@ -103,4 +137,19 @@ export const CommentForm = styled(Field)`
     border-radius: 12px;
     border: none;
     padding: 18px 308px 76px 18px;
+    
+    margin-bottom: 14px;
+
+    &::placeholder {
+        color: #6C717B;
+        transition: color 0.2s ease;
+    }
+
+    &:focus::placeholder {
+        color: #101828;
+    }
+
+    &:focus {
+        outline: none;
+    }
 `;

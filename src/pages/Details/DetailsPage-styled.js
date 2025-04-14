@@ -16,7 +16,7 @@ export const TabFeatures = styled(NavLink)`
     font-size: 20px;
     color: #101828;
     text-decoration: none;
-    
+
     &.active {
         padding-bottom: 27px;
         border-bottom: 5px solid #E44848;
