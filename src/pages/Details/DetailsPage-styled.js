@@ -8,6 +8,7 @@ export const TabsContainer = styled.div`
 
 export const MoreInfoFormContainer = styled.div`
   display: flex;
+    justify-content: space-between;
 `;
 
 export const TabFeatures = styled(NavLink)`
