@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchDetailsById } from '../../redux/catalog/TruckDetailsById/operations.js';
 import { selectTruck } from '../../redux/catalog/TruckInfo/selectors.js';
 import {
+  CampersContainerPage,
   TruckContainer,
   TruckImg,
   Description,
@@ -29,7 +30,7 @@ export default function Truck() {
   };
 
   return (
-    <>
+    <CampersContainerPage>
       <Filters />
       {
         items &&(<TruckContainer>
@@ -75,6 +76,6 @@ export default function Truck() {
             ))}
           </TruckContainer>)
       }
-    </>
+    </CampersContainerPage>
   );
 }

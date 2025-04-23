@@ -1,8 +1,10 @@
+import { LocationHead, LocationInput } from './Location-styled.js';
+
 export default function Location() {
   return (
     <div>
-      <h4>Location</h4>
-      <input placeholder="City" type="text" />
-    </div>
-  )
+      <LocationHead>Location</LocationHead>
+      <LocationInput placeholder="City" type="text" alt="Location" />
+</div>
+)
 };
