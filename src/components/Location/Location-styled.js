@@ -9,8 +9,30 @@ export const LocationHead = styled.h4`
 `;
 
 export const LocationInput = styled.input`
+    width: 100%;
     background-color: #F7F7F7;
     border-radius: 12px;
+    padding: 18px 215px 18px 52px;
     border: none;
-    padding: 18px 215px 18px 18px;
+    background-image: url('/filtersIcon/location.svg');
+    background-repeat: no-repeat;
+    background-position: 18px center;
+    background-size: 20px 20px;
+
+    &:focus {
+        outline: none;
+    }
+
+
+    &::placeholder {
+        font-weight: 400;
+        font-size: 16px;
+        color: #6C717B;
+        transition: color 0.2s ease;
+    }
+
+    &:focus::placeholder {
+        color: #101828;
+    }
+
 `;

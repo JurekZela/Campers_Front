@@ -4,7 +4,7 @@ export default function Location() {
   return (
     <div>
       <LocationHead>Location</LocationHead>
-      <LocationInput placeholder="City" type="text" alt="Location" />
-</div>
-)
+      <LocationInput placeholder='City' type="text" alt="Location" />
+    </div>
+  );
 };

@@ -24,6 +24,7 @@ const trucksSlice = createSlice({
     limit: 4,
     error: null,
     isLoading: false,
+    favorite: false,
   },
 
   extraReducers: builder => {

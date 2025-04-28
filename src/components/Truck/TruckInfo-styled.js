@@ -44,6 +44,12 @@ export const TruckPrice = styled.p`
     
 `;
 
+export const IconFavorite = styled.img`
+  &:hover {
+      cursor: pointer;
+  }
+`;
+
 export const TruckImg = styled.img`
     max-width: 292px;
     height: auto;

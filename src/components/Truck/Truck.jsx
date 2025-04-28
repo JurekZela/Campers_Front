@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
+import clsx from "clsx";
 import { fetchDetailsById } from '../../redux/catalog/TruckDetailsById/operations.js';
 import { selectTruck } from '../../redux/catalog/TruckInfo/selectors.js';
 import {
@@ -11,6 +12,7 @@ import {
   InfoPriNam,
   TruckName,
   TruckPrice,
+  IconFavorite,
   ShowMore,
   InfoLocMap,
   Rating,
@@ -20,6 +22,7 @@ import {
 } from './TruckInfo-styled.js';
 import { renderCategory } from '../Categorie/Categorie.jsx';
 import Filters from '../Filters/Filters.jsx';
+import { selectFavorite } from '../../redux/catalog/TruckInfo/selectors.js';
 
 export default function Truck() {
   const dispatch = useDispatch();
@@ -27,6 +30,10 @@ export default function Truck() {
 
   const handleShowMore = (id) => {
     dispatch(fetchDetailsById(id));
+  };
+
+  const iconFavorite = () => {
+    const dispatch = useDispatch();
   };
 
   return (
@@ -44,7 +51,7 @@ export default function Truck() {
                     <TruckName>{item.name}</TruckName>
                     <HeardPrc>
                       <TruckPrice>€{item.price}</TruckPrice>
-                      <img src="/icons/heart.svg" alt="heart" width="26px" height="24px" />
+                      <IconFavorite onClick={iconFavorite} src="/icons/heart.svg" alt="heart" width="26px" height="24px" />
                     </HeardPrc>
                   </InfoPriNam>
 
