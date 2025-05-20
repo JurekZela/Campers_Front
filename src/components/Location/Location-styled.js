@@ -31,8 +31,4 @@ export const LocationInput = styled.input`
         transition: color 0.2s ease;
     }
 
-    &:focus::placeholder {
-        color: #101828;
-    }
-
 `;

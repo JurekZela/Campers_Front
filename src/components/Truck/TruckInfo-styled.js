@@ -44,7 +44,7 @@ export const TruckPrice = styled.p`
     
 `;
 
-export const IconFavorite = styled.img`
+export const IconFavorite = styled.svg`
   &:hover {
       cursor: pointer;
   }
