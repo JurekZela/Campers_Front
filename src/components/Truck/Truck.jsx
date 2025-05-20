@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchDetailsById } from '../../redux/catalog/TruckDetailsById/operations.js';
-import { selectTruck } from '../../redux/catalog/TruckInfo/selectors.js';
+import { selectTruck } from '../../redux/TruckInfo/selectors.js';
 import {
   CampersContainerPage,
   TruckContainer,

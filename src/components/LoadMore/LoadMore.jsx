@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchTrucks } from '../../redux/catalog/TruckInfo/operations.js';
-import { selectPage, selectLimit, selectLoading } from '../../redux/catalog/TruckInfo/selectors.js';
+import { fetchTrucks } from '../../redux/TruckInfo/operations.js';
+import { selectPage, selectLimit, selectLoading } from '../../redux/TruckInfo/selectors.js';
 import { LoadMoreBtn } from './LoadMore-styled.js';
 
 export default function LoadMore() {
