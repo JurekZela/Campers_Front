@@ -1,7 +1,9 @@
+import { TypeTitle } from './VehicleType-styled.js';
+
 export default function VehicleType() {
   return (
     <div>
-      <h4>Vehicle Type</h4>
+      <TypeTitle>Vehicle Type</TypeTitle>
     </div>
   )
 }

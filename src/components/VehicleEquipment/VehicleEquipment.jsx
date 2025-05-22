@@ -1,7 +1,9 @@
+import { EquipmentTitle } from './VehicleEquipment-styled.js';
+
 export default function VehicleEquipment () {
   return (
     <div>
-      <h4>Vehicle Equipment</h4>
+      <EquipmentTitle>Vehicle Equipment</EquipmentTitle>
     </div>
   );
 };
