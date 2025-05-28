@@ -9,3 +9,14 @@ export const EquipmentTitle = styled.h4`
 
   border-bottom: 1px solid #DADDE1;
 `;
+
+export const EquipmentContainer = styled.ul`
+  display: flex;
+  
+`;
+
+export const EquipmentList = styled.li`
+  padding: 16px 18px;
+  border: 1px solid #DADDE1;
+  border-radius: 12px;
+`;
