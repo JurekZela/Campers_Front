@@ -1,9 +1,9 @@
-import {EquipmentContainer, EquipmentList, EquipmentTitle } from './VehicleEquipment-styled.js';
+import { Equipment, EquipmentContainer, EquipmentList, EquipmentTitle } from './VehicleEquipment-styled.js';
 
 export default function VehicleEquipment () {
 
   return (
-    <div>
+    <Equipment>
       <EquipmentTitle>Vehicle Equipment</EquipmentTitle>
       <EquipmentContainer>
         <EquipmentList>
@@ -18,6 +18,6 @@ export default function VehicleEquipment () {
         <EquipmentList><img src="/icons/ph_shower.svg" alt="Bathroom" width="32px" height="28px" />Bathroom
         </EquipmentList>
       </EquipmentContainer>
-    </div>
+    </Equipment>
   );
 };

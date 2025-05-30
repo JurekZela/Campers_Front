@@ -1,5 +1,9 @@
 import { styled } from 'styled-components';
 
+export const Equipment = styled.div`
+  margin-top: 40px;
+`;
+
 export const EquipmentTitle = styled.h4`
   color: #101828;
   font-weight: 600;
@@ -11,12 +15,21 @@ export const EquipmentTitle = styled.h4`
 `;
 
 export const EquipmentContainer = styled.ul`
-  display: flex;
-  
+    display: flex;
+    gap: 8px;
+    margin-top: 22px;
+    flex-wrap: wrap;
 `;
 
 export const EquipmentList = styled.li`
-  padding: 16px 18px;
-  border: 1px solid #DADDE1;
-  border-radius: 12px;
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 16px 18px;
+    border: 1px solid #DADDE1;
+    border-radius: 12px;
+    width: 112px;
+    height: 96px;
 `;

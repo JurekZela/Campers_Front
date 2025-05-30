@@ -10,7 +10,7 @@ export default function Filters() {
       <FiltersTitle>Filters</FiltersTitle>
       <VehicleEquipment />
       <VehicleType />
-      <FilterSearchButton >Search</FilterSearchButton>
+      <FilterSearchButton>Search</FilterSearchButton>
     </FiltersContainer>
   )
 };
