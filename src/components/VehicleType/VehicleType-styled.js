@@ -27,6 +27,7 @@ export const TypeList = styled.li`
     align-items: center;
     justify-content: center;
     text-align: center;
+  cursor: pointer;
     margin-top: 22px;
     border: 1px solid #DADDE1;
     border-radius: 10px;

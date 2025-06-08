@@ -23,11 +23,17 @@ import { renderCategory } from '../Categorie/Categorie.jsx';
 import Filters from '../Filters/Filters.jsx';
 import { selectFavorites } from '../../redux/catalog/Favorites/selector.js';
 import { toggleFavorites } from '../../redux/catalog/Favorites/slice.js';
+import { selectFilterItem } from '../../redux/Filter/selector.js';
+
+const itemsFilter = (all, filter) => filter.length > 0 ? filter : all;
 
 export default function Truck() {
   const dispatch = useDispatch();
-  const items = useSelector(selectTruck);
+  const truckItems = useSelector(selectTruck);
+  const filterItems = useSelector(selectFilterItem);
   const favorites = useSelector(selectFavorites);
+
+const filteredItems = itemsFilter(truckItems, filterItems);
 
   const handleShowMore = (id) => {
     dispatch(fetchDetailsById(id));
@@ -41,8 +47,8 @@ export default function Truck() {
     <CampersContainerPage>
       <Filters />
       {
-        items &&(<TruckContainer>
-            {items.map((item) => (
+        filteredItems &&(<TruckContainer>
+            {filteredItems.map((item) => (
               <TruckCard key={item.id}>
                 {item.gallery?.[0]?.thumb && (
                   <TruckImg src={item.gallery[0].thumb} alt={item.name} />

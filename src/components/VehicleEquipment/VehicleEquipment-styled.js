@@ -32,4 +32,5 @@ export const EquipmentList = styled.li`
     border-radius: 12px;
     width: 112px;
     height: 96px;
+  cursor: pointer;
 `;

@@ -1,10 +1,11 @@
-import { fetchTrucks } from '../../redux/TruckInfo/operations.js';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useMemo } from 'react';
+import { Bounce, toast, ToastContainer } from 'react-toastify';
+
+import { fetchTrucks } from '../../redux/TruckInfo/operations.js';
 import { selectLimit, selectPage } from '../../redux/TruckInfo/selectors.js';
 import Truck from '../../components/Truck/Truck.jsx';
 import LoadMore from '../../components/LoadMore/LoadMore.jsx';
-import { Bounce, toast, ToastContainer } from 'react-toastify';
 import  Catalogs  from '../../components/Catalogs/Catalogs.jsx';
 
 export default function CampersPage () {
