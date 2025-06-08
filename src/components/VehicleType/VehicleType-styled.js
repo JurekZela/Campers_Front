@@ -29,9 +29,13 @@ export const TypeList = styled.li`
     text-align: center;
   cursor: pointer;
     margin-top: 22px;
-    border: 1px solid #DADDE1;
+  border: 1px solid ${({ $active }) => ($active ? '#E44848' : '#DADDE1')};
     border-radius: 10px;
     padding: 16px 32px;
     width: 112px;
     height: 96px;
+
+  &:active {
+    border: 1px solid #E44848;
+  }
 `;
