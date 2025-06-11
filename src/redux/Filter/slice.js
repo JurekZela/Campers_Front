@@ -27,6 +27,7 @@ const filterSlice = createSlice({
       .addCase(fetchTrucksByFilter.fulfilled, fulfilledTrucks)
       .addCase(fetchTrucksByFilter.rejected, fetchTrucksRejected)
       .addCase(fetchTrucksByFilter.pending, (state, action) => {
+       state.items = [];
         state.isLoading = true;
       })
   }
