@@ -4,20 +4,22 @@ import VehicleEquipment from '../VehicleEquipment/VehicleEquipment.jsx';
 import VehicleType from '../VehicleType/VehicleType.jsx';
 import { useSearchParams } from 'react-router-dom';
 import { fetchTrucksByFilter } from '../../redux/Filter/operations.js';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 export default function Filters() {
   const dispatch = useDispatch();
   const [searchParams] = useSearchParams();
 
   const form = searchParams.get("form");
+  const equipment = searchParams.get("equipment");
+  console.log(equipment);
 
   const onSubmit = (e) => {
     e.preventDefault();
 
     if (form === "") return;
 
-    dispatch(fetchTrucksByFilter({ form }));
+    dispatch(fetchTrucksByFilter({ form, equipment }));
   };
 
   return (

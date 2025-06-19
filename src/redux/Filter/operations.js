@@ -3,9 +3,9 @@ import axios from 'axios';
 
 export const fetchTrucksByFilter = createAsyncThunk(
   'trucks/fetchFilter',
-  async ({ form }, thunkAPI) => {
+  async ({ form, equipment }, thunkAPI) => {
     try {
-      const { data } = await axios.get(`campers?form=${form}`);
+      const { data } = await axios.get(`campers?form=${form}&equipment=${equipment}`);
       console.log(data);
       return data;
     } catch (e) {
