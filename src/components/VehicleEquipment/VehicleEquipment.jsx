@@ -3,7 +3,6 @@ import { useSearchParams } from 'react-router-dom';
 
 export default function VehicleEquipment () {
   const [searchParams, setSearchParams] = useSearchParams();
-  console.log(searchParams.get("equipment"));
 
   const updateSearchParams = (key, value) => {
     const updatedParams = new URLSearchParams(searchParams);
