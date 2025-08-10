@@ -6,9 +6,9 @@ import { fetchTrucks } from '../../redux/TruckInfo/operations.js';
 import { selectLimit, selectPage } from '../../redux/TruckInfo/selectors.js';
 import Truck from '../../components/Truck/Truck.jsx';
 import LoadMore from '../../components/LoadMore/LoadMore.jsx';
-import  Catalogs  from '../../components/Catalogs/Catalogs.jsx';
+import Catalogs from '../../components/Catalogs/Catalogs.jsx';
 
-export default function CampersPage () {
+export default function CampersPage() {
   const dispatch = useDispatch();
   const page = useSelector(selectPage);
   const limit = useSelector(selectLimit);
@@ -21,19 +21,27 @@ export default function CampersPage () {
     }
   }, [page, totalPages]);
 
-
   useMemo(() => {
     dispatch(fetchTrucks({ page, limit }));
   }, [dispatch]);
 
-  return(
+  return (
     <Catalogs>
       <Truck />
-      {page <= totalPages && (<LoadMore/>)}
-      <ToastContainer position="bottom-center" autoClose={3000} hideProgressBar={false}
-                      newestOnTop={false} closeOnClick={false} rtl={false}
-                      pauseOnFocusLoss draggable pauseOnHover theme="light" transition={Bounce}
+      {page <= totalPages && <LoadMore />}
+      <ToastContainer
+        position="bottom-center"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition={Bounce}
       />
     </Catalogs>
-  )
+  );
 }

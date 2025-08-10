@@ -2,13 +2,8 @@ import { styled } from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const CampersContainerPage = styled.div`
-  display: flex;
-    padding: 48px 63px;
-`;
-
-export const TruckContainer = styled.ul`
-    display: block;
-    margin-left: auto;
+    display: flex;
+    gap: 65px;
 `;
 
 export const TruckCard = styled.li`

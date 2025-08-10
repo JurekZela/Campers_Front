@@ -3,7 +3,6 @@ import { fetchDetailsById } from '../../redux/catalog/TruckDetailsById/operation
 import { selectTruck } from '../../redux/TruckInfo/selectors.js';
 import {
   CampersContainerPage,
-  TruckContainer,
   TruckImg,
   Description,
   TruckCard,
@@ -47,7 +46,7 @@ const filteredItems = itemsFilter(truckItems, filterItems);
     <CampersContainerPage>
       <Filters />
       {
-        filteredItems &&(<TruckContainer>
+        filteredItems &&(<ul>
             {filteredItems.map((item) => (
               <TruckCard key={item.id}>
                 {item.gallery?.[0]?.thumb && (
@@ -90,7 +89,7 @@ const filteredItems = itemsFilter(truckItems, filterItems);
                 </ListCardInfo>
               </TruckCard>
             ))}
-          </TruckContainer>)
+          </ul>)
       }
     </CampersContainerPage>
   );

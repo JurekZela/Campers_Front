@@ -3,11 +3,9 @@ import { Field, Form } from 'formik';
 
 export const ReservationContainer = styled.div`
     min-width: 641px;
-    max-width: 700px;
+    max-width: 680px;
     border: 1px solid #DADDE1;
     border-radius: 10px;
-    margin-top: 46px;
-    margin-left: 42px;
     padding: 44px 56px 44px 56px;
 `;
 
