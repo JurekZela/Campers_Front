@@ -2,8 +2,7 @@ import { styled } from 'styled-components';
 import { Field, Form } from 'formik';
 
 export const ReservationContainer = styled.div`
-    min-width: 641px;
-    max-width: 680px;
+    max-width: 641px;
     border: 1px solid #DADDE1;
     border-radius: 10px;
     padding: 44px 56px 44px 56px;

@@ -1,4 +1,8 @@
-import { FiltersContainer, FiltersTitle, FilterSearchButton } from './Filters-styled.js';
+import {
+  FiltersContainer,
+  FiltersTitle,
+  FilterSearchButton,
+} from './Filters-styled.js';
 import Location from '../Location/Location.jsx';
 import VehicleEquipment from '../VehicleEquipment/VehicleEquipment.jsx';
 import VehicleType from '../VehicleType/VehicleType.jsx';
@@ -10,13 +14,13 @@ export default function Filters() {
   const dispatch = useDispatch();
   const [searchParams] = useSearchParams();
 
-  const form = searchParams.get("form");
-  const equipment = searchParams.get("equipment");
+  const form = searchParams.get('form');
+  const equipment = searchParams.get('equipment');
 
-  const onSubmit = (e) => {
+  const onSubmit = e => {
     e.preventDefault();
 
-    if (form === "") return;
+    if (form === '') return;
 
     dispatch(fetchTrucksByFilter({ form, equipment }));
   };
@@ -29,5 +33,5 @@ export default function Filters() {
       <VehicleType />
       <FilterSearchButton onClick={onSubmit}>Search</FilterSearchButton>
     </FiltersContainer>
-  )
-};
+  );
+}
