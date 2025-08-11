@@ -1,13 +1,14 @@
+import { useSearchParams } from 'react-router-dom';
 import {
   Equipment,
   EquipmentContainer,
   EquipmentList,
   EquipmentTitle,
 } from './VehicleEquipment-styled.js';
-import { useSearchParams } from 'react-router-dom';
 
 export default function VehicleEquipment() {
   const [searchParams, setSearchParams] = useSearchParams();
+  const activeType = searchParams.get('equipment');
 
   const updateSearchParams = (key, value) => {
     const updatedParams = new URLSearchParams(searchParams);
@@ -21,7 +22,10 @@ export default function VehicleEquipment() {
     <Equipment>
       <EquipmentTitle>Vehicle Equipment</EquipmentTitle>
       <EquipmentContainer>
-        <EquipmentList onClick={() => updateSearchParams('AC', 'true')}>
+        <EquipmentList
+          $active={activeType === 'true'}
+          onClick={() => updateSearchParams('equipment', 'true')}
+        >
           <img src="/icons/ac.svg" alt="AC" width="32px" height="28px" />
           AC
         </EquipmentList>

@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 import { fetchTrucksByFilter } from './operations.js';
 
 const fulfilledTrucks = (state, action) => {
@@ -11,10 +11,10 @@ const fulfilledTrucks = (state, action) => {
 const fetchTrucksRejected = (state, action) => {
   state.isLoading = false;
   state.error = action.payload;
-}
+};
 
 const filterSlice = createSlice({
-  name: "filters",
+  name: 'filters',
 
   initialState: {
     items: [],
@@ -27,9 +27,9 @@ const filterSlice = createSlice({
       .addCase(fetchTrucksByFilter.fulfilled, fulfilledTrucks)
       .addCase(fetchTrucksByFilter.rejected, fetchTrucksRejected)
       .addCase(fetchTrucksByFilter.pending, (state, action) => {
-       state.items = [];
+        state.items = [];
         state.isLoading = true;
-      })
-  }
+      });
+  },
 });
 export default filterSlice.reducer;
