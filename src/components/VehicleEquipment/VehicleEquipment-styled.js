@@ -22,15 +22,15 @@ export const EquipmentContainer = styled.ul`
 `;
 
 export const EquipmentList = styled.li`
-    display: flex;
-    gap: 16px;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 16px 18px;
-    border: 1px solid #DADDE1;
-    border-radius: 12px;
-    width: 112px;
-    height: 96px;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 16px 18px;
+  border: 1px solid ${({ $active }) => ($active ? '#E44848' : '#DADDE1')};
+  border-radius: 12px;
+  width: 112px;
+  height: 96px;
   cursor: pointer;
 `;

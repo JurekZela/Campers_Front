@@ -51,3 +51,4 @@ TravelTrucks is a web application that allows you to browse, filter and book cam
 git clone git@github.com:JurekZela/Campers_Front.git
 cd Campers_Front
 npm install
+npm run dev

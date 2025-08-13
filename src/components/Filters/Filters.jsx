@@ -1,22 +1,28 @@
-import { FiltersContainer, FiltersTitle, FilterSearchButton } from './Filters-styled.js';
+import { useSearchParams } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { fetchTrucksByFilter } from '../../redux/Filter/operations.js';
 import Location from '../Location/Location.jsx';
 import VehicleEquipment from '../VehicleEquipment/VehicleEquipment.jsx';
 import VehicleType from '../VehicleType/VehicleType.jsx';
-import { useSearchParams } from 'react-router-dom';
-import { fetchTrucksByFilter } from '../../redux/Filter/operations.js';
-import { useDispatch, useSelector } from 'react-redux';
+import {
+  FiltersContainer,
+  FiltersTitle,
+  FilterSearchButton,
+} from './Filters-styled.js';
 
 export default function Filters() {
   const dispatch = useDispatch();
   const [searchParams] = useSearchParams();
 
-  const form = searchParams.get("form");
-  const equipment = searchParams.get("equipment");
+  const form = searchParams.get('form');
+  const equipment = searchParams.get('AC');
+  console.log(equipment);
 
-  const onSubmit = (e) => {
+  const onSubmit = e => {
     e.preventDefault();
 
-    if (form === "") return;
+    if (form === '') return;
 
     dispatch(fetchTrucksByFilter({ form, equipment }));
   };
@@ -29,5 +35,5 @@ export default function Filters() {
       <VehicleType />
       <FilterSearchButton onClick={onSubmit}>Search</FilterSearchButton>
     </FiltersContainer>
-  )
-};
+  );
+}

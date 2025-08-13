@@ -4,10 +4,11 @@ import { fetchTrucks } from './operations.js';
 const fulfilledTrucks = (state, action) => {
   state.error = null;
   state.isLoading = false;
-
   state.items = [...state.items, ...action.payload.items];
   state.page += 1;
   state.total = action.payload.total;
+
+  console.log(state.items);
 };
 
 const fetchTrucksRejected = (state, action) => {

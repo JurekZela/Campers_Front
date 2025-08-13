@@ -6,8 +6,7 @@ export const DetailsContainer = styled.div`
     gap: 100px;
     background-color: rgba(247, 247, 247, 1);
     padding: 45px 50px;
-    min-width: 631px;
-    max-width: 750px;
+    max-width: 631px;
     height: auto;
     border-radius: 10px;
     

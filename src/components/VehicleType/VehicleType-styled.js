@@ -21,19 +21,19 @@ export const TypeTitle = styled.h4`
 `;
 
 export const TypeList = styled.li`
-    display: flex;
-    gap: 16px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   cursor: pointer;
-    margin-top: 22px;
+  margin-top: 22px;
   border: 1px solid ${({ $active }) => ($active ? '#E44848' : '#DADDE1')};
-    border-radius: 10px;
-    padding: 16px 32px;
-    width: 112px;
-    height: 96px;
+  border-radius: 10px;
+  padding: 16px 32px;
+  width: 112px;
+  height: 96px;
 
   &:active {
     border: 1px solid #E44848;
