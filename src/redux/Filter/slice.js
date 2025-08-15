@@ -6,6 +6,8 @@ const fulfilledTrucks = (state, action) => {
   state.isLoading = false;
 
   state.items = [...action.payload.items];
+  console.log(state.items);
+  
 };
 
 const fetchTrucksRejected = (state, action) => {

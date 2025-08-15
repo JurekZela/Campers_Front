@@ -16,8 +16,7 @@ export default function Filters() {
   const [searchParams] = useSearchParams();
 
   const form = searchParams.get('form');
-  const equipment = searchParams.get('AC');
-  console.log(equipment);
+  const equipment = searchParams.get('equipment');
 
   const onSubmit = e => {
     e.preventDefault();
