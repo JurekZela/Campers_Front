@@ -1,4 +1,6 @@
+import { useSelector } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
+
 import { selectTruck } from '../../redux/TruckInfo/selectors.js';
 import {
   Equipment,
@@ -6,15 +8,11 @@ import {
   EquipmentList,
   EquipmentTitle,
 } from './VehicleEquipment-styled.js';
-import { useDispatch, useSelector } from 'react-redux';
 
 export default function VehicleEquipment() {
   let [searchParams, setSearchParams] = new useSearchParams();
 
   const listTrucks = useSelector(selectTruck);
-  const dispatch = useDispatch();
-  
-  const activeType = searchParams.get('equipment');
 
   const updateSearchParams = (key) => {
     listTrucks.filter(({ AC, transmission, kitchen, TV, bathroom, }) => {
@@ -45,6 +43,8 @@ export default function VehicleEquipment() {
     });
   };
 
+  
+
   return (
     <Equipment>
       <EquipmentTitle>Vehicle Equipment</EquipmentTitle>
@@ -57,7 +57,7 @@ export default function VehicleEquipment() {
           AC
         </EquipmentList>
         <EquipmentList  $active={activeType === 'true'}
-          onClick={() => updateSearchParams('transmission')}>
+          onClick={(e) => updateSearchParams('transmission')}>
           <img
             src="/icons/transmission.svg"
             alt="transmission"
