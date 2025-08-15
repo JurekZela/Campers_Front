@@ -7,8 +7,6 @@ const fulfilledTrucks = (state, action) => {
   state.items = [...state.items, ...action.payload.items];
   state.page += 1;
   state.total = action.payload.total;
-
-  console.log(state.items);
 };
 
 const fetchTrucksRejected = (state, action) => {

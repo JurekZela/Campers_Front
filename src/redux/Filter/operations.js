@@ -6,7 +6,6 @@ export const fetchTrucksByFilter = createAsyncThunk(
   async ({ form, equipment }, thunkAPI) => {
     try {
       const { data } = await axios.get(`campers?form=${form}&equipment=${equipment}`);
-      console.log(data);
       return data;
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);
